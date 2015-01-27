@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+- oraclejdk8
+
+before_script:
+  - git clone git://git.code.sf.net/p/indiforjava/code indiforjava
+  - cd indiforjava
+  
+  
+script: mvn clean install 
