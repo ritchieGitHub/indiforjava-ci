@@ -4,6 +4,7 @@ jdk:
 - oraclejdk8
 
 before_script:
+  - echo -e "Host frs.sourceforge.net\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - git clone git://git.code.sf.net/p/indiforjava/code indiforjava
   - cd indiforjava
   
