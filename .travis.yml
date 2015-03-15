@@ -31,7 +31,7 @@ before_script:
 script: mvn clean install --settings ../settings.xml
 after_success:
 - mvn deploy --settings ../settings.xml
-- mvn site --settings ../settings.xml
+- mvn site site-deploy --settings ../settings.xml
 env:
 global:
 - secure: "nPhZya2DxPualZILnwxyBG/OdVhltrv7VNNoubEi4C5NkIEC6QV/b0h9KbyUb/bw7htiX0tEuABiRbISWxj2aRomyIaWnWY9F25icT4vIY2qL66gNt9an+Fu/xOQfWcDlgwzVBHWaihzispwhV1X1HgDJ+j6dDmT1qbNUG7zrrg="
