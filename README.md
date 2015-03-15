@@ -2,3 +2,4 @@
 ci tests for indi for java
 3
 build
+build
