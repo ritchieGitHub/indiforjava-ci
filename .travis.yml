@@ -5,8 +5,8 @@ jdk:
 
 before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - sudo echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - cat ~/.ssh/config
+  - cat ~/.ssh/known_hosts
   - git clone git://git.code.sf.net/p/indiforjava/code indiforjava
   - cd indiforjava/i4j-all-in-one
   
