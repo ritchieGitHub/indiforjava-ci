@@ -6,11 +6,6 @@
 			<id>sourceforge-deploy</id>
 			<username>${env.SITE_DEPLOY_USERNAME}</username>
 			<password>${env.SITE_DEPLOY_PASSWORD}</password>
-			<configuration>
-				<knownHostsProvider implementation="org.apache.maven.wagon.providers.ssh.knownhost.NullKnownHostProvider">
-					<hostKeyChecking>no</hostKeyChecking>
-				</knownHostsProvider>
-			</configuration>
 		</server>
 		<server>
 			<id>sonatype-nexus-staging</id>
