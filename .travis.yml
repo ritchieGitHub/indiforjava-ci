@@ -6,11 +6,12 @@ jdk:
 before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - sudo echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - cat ~/.ssh/config
   - git clone git://git.code.sf.net/p/indiforjava/code indiforjava
-  - cd indiforjava
+  - cd indiforjava/i4j-all-in-one
   
   
-script: mvn clean install deploy --settings ../settings.xml
+script: mvn clean install deploy --settings ../../settings.xml
 
 env:
   global:
