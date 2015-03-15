@@ -21,6 +21,8 @@ before_install:
 - echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
 - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 before_script:
+- ssh-keyscan -H shell.sf.net >> ~/.ssh/known_hosts
+- echo "exit" | ssh -i token -t ritchie_gmx_at,indiforjava@shell.sf.net create
 - ssh-keyscan -H frs.sourceforge.net >> ~/.ssh/known_hosts
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git clone git://git.code.sf.net/p/indiforjava/code indiforjava
