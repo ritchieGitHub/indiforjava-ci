@@ -4,6 +4,7 @@ jdk:
 - oraclejdk8
 
 before_script:
+  - ssh-keyscan -H frs.sourceforge.net >> ~/.ssh/known_hosts
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - cat ~/.ssh/config
   - cat ~/.ssh/known_hosts
