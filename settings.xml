@@ -5,7 +5,7 @@
 		<server>
 			<id>sourceforge-deploy</id>
 			<username>${env.SITE_DEPLOY_USERNAME}</username>
-			<privateKey>${user.home}/ritchieGitHub/indiforjava-ci/token</privateKey>
+			<privateKey>/home/travis/build/ritchieGitHub/indiforjava-ci/token</privateKey>
 		</server>
 		<server>
 			<id>sonatype-nexus-staging</id>
