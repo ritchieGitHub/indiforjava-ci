@@ -4,6 +4,7 @@ jdk:
 before_install:
 - openssl aes-256-cbc -K $encrypted_191b37c76924_key -iv $encrypted_191b37c76924_iv -in token.enc -out token -d
 - chmod 600 token
+- pwd
 # Install base Android SDK
 - sudo apt-get update -qq
 - if [ `uname -m` = x86_64 ]; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch > /dev/null; fi
