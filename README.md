@@ -4,3 +4,7 @@ ci tests for indi for java
 build
 build
 build
+build
+build
+build
+build
