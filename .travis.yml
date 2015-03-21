@@ -34,15 +34,15 @@ before_script:
 
 script:
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml
-
-after_success:
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean site-deploy  --settings ../settings.xml
 
+after_success:
+
 
 env:
-global:
-- secure: "nPhZya2DxPualZILnwxyBG/OdVhltrv7VNNoubEi4C5NkIEC6QV/b0h9KbyUb/bw7htiX0tEuABiRbISWxj2aRomyIaWnWY9F25icT4vIY2qL66gNt9an+Fu/xOQfWcDlgwzVBHWaihzispwhV1X1HgDJ+j6dDmT1qbNUG7zrrg="
-- secure: "kRRK94VXSCSB839o1gu0QnH+3H5sSeI8T4Cd3YF+FznYUTqq6zLQFXKz/eYmk4v+8Vq9c+s7shCx4qk1ayRa2O3NhSbpfypwigK3R29uukxHB7zuHU7IoXuUFGjr+MEGcrerhJCeOqQv6AVFFe22op5szmVlAiFLq9Q1Gr7JoQ8="
-- secure: "qwxgqefHFlFt53kircBZTZUESrrXnvvL59rDfnGDf1q7i6AL1bIXgHAvX7OBCHtrtWDC9kr2yDMTDgmHP5mVyIRTJWPv2eDyKz7bsT2gsnjDhngb7G+wJvXPJVAcOnea7txyrduimuJFDIGWSQdEEVXqXEZqnWx1AZN3bdrjpno="
-- secure: "LYsqaqbct8Zpm4ju1Ak0JDRT0SWDzUoBii9PhVeC2xairYvhcYZQ519csPq5lSQsDnH7AfEYdkuGJST6WWX1lBmaBa+pmqqHyiGZZMnPM0MWpcXLhEC3reB6xBUFbFGjZG9Q+oy9G8x5anD23oObz2nz7hPmyjLYUxfnRJEiSgo="
+ global:
+  - secure: "nPhZya2DxPualZILnwxyBG/OdVhltrv7VNNoubEi4C5NkIEC6QV/b0h9KbyUb/bw7htiX0tEuABiRbISWxj2aRomyIaWnWY9F25icT4vIY2qL66gNt9an+Fu/xOQfWcDlgwzVBHWaihzispwhV1X1HgDJ+j6dDmT1qbNUG7zrrg="
+  - secure: "kRRK94VXSCSB839o1gu0QnH+3H5sSeI8T4Cd3YF+FznYUTqq6zLQFXKz/eYmk4v+8Vq9c+s7shCx4qk1ayRa2O3NhSbpfypwigK3R29uukxHB7zuHU7IoXuUFGjr+MEGcrerhJCeOqQv6AVFFe22op5szmVlAiFLq9Q1Gr7JoQ8="
+  - secure: "qwxgqefHFlFt53kircBZTZUESrrXnvvL59rDfnGDf1q7i6AL1bIXgHAvX7OBCHtrtWDC9kr2yDMTDgmHP5mVyIRTJWPv2eDyKz7bsT2gsnjDhngb7G+wJvXPJVAcOnea7txyrduimuJFDIGWSQdEEVXqXEZqnWx1AZN3bdrjpno="
+  - secure: "LYsqaqbct8Zpm4ju1Ak0JDRT0SWDzUoBii9PhVeC2xairYvhcYZQ519csPq5lSQsDnH7AfEYdkuGJST6WWX1lBmaBa+pmqqHyiGZZMnPM0MWpcXLhEC3reB6xBUFbFGjZG9Q+oy9G8x5anD23oObz2nz7hPmyjLYUxfnRJEiSgo="
