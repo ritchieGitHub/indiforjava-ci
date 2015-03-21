@@ -34,9 +34,9 @@ before_script:
 
 script:
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml
-  - if [ "$?" -ne 0 ]; then exit 1; fi
+  # - if [ "$?" -ne 0 ]; then exit 1; fi
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml
-  - if [ "$?" -ne 0 ]; then exit 1; fi
+  # - if [ "$?" -ne 0 ]; then exit 1; fi
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean site-deploy  --settings ../settings.xml
 
 after_success:
