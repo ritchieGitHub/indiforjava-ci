@@ -25,6 +25,7 @@ before_install:
 
 before_script:
   - ssh-keyscan -H frs.sourceforge.net >> ~/.ssh/known_hosts
+  - ssh-keyscan -H shell.sourceforge.net >> ~/.ssh/known_hosts
   - ssh-keyscan -H shell.sf.net >> ~/.ssh/known_hosts
   - echo "exit" | ssh -i token -t ritchie_gmx_at,indiforjava@shell.sf.net create
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
