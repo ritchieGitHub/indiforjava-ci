@@ -33,11 +33,12 @@ before_script:
   - cd indiforjava
 
 script:
-  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml
-  # - if [ "$?" -ne 0 ]; then exit 1; fi
-  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml
-  # - if [ "$?" -ne 0 ]; then exit 1; fi
-  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean site-deploy  --settings ../settings.xml
+  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml ; export MAVEN_RESULT=$?
+  - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
+  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml ; export MAVEN_RESULT=$?
+  - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
+  - mvn -Dandroid.sdk.path=$ANDROID_HOME clean site-deploy  --settings ../settings.xml ; export MAVEN_RESULT=$?
+  - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
 
 after_success:
  # after success did work because the encrypted keys are not available
