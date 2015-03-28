@@ -33,7 +33,6 @@ before_script:
   - cd indiforjava
 
 script:
-  - exit 1
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml ; export MAVEN_RESULT=$?
   - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml ; export MAVEN_RESULT=$?
@@ -46,7 +45,7 @@ after_success:
  
 notifications:
   email:
-    - Richard.VanNieuwenhoven@itsv.at
+    - richard.vannieuwenhoven@adesso.at
     - zerjioi@ugr.es
     
 env:
