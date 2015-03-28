@@ -33,6 +33,7 @@ before_script:
   - cd indiforjava
 
 script:
+  - exit 1
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean install  --settings ../settings.xml ; export MAVEN_RESULT=$?
   - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
   - mvn -Dandroid.sdk.path=$ANDROID_HOME clean deploy --settings ../settings.xml ; export MAVEN_RESULT=$?
@@ -42,7 +43,12 @@ script:
 
 after_success:
  # after success did work because the encrypted keys are not available
-
+ 
+notifications:
+  email:
+    - Richard.VanNieuwenhoven@itsv.at
+    - zerjioi@ugr.es
+    
 env:
  global:
   - secure: "nPhZya2DxPualZILnwxyBG/OdVhltrv7VNNoubEi4C5NkIEC6QV/b0h9KbyUb/bw7htiX0tEuABiRbISWxj2aRomyIaWnWY9F25icT4vIY2qL66gNt9an+Fu/xOQfWcDlgwzVBHWaihzispwhV1X1HgDJ+j6dDmT1qbNUG7zrrg="
